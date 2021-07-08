@@ -1,0 +1,6 @@
+.navSrcInput button{
+  transform: translateY(-1.1px);
+}
+.accountPreviewNav{
+  transform: translateX(-2rem);
+}

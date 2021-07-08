@@ -1,0 +1,20 @@
+.productSlider .swiper-button-next{
+  transform: translate3d(0.6em ,-4em,0);
+}
+.productSlider .swiper-button-prev{
+  transform: translate3d(-0.6em ,-4em,0);
+}
+.productSlider .swiper-button-prev,
+.productSlider .swiper-button-next{
+  color: #111827;
+  padding: 5rem 2rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.productSlider .swiper-button-prev:hover,
+.productSlider .swiper-button-next:hover{
+  border: 2px solid #000000;
+  background-color: rgb(238, 238, 238);
+}
