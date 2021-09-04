@@ -2,7 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import img from "../../images/logo/amazon.png";
 
+// import jwt_decode from "jwt-decode";
+
 const Footer = () => {
+
+    // const token = sessionStorage.getItem("token");
+    // const decoded = jwt_decode(token);
+
+    // console.log(decoded);
+  
+
   const defineP = "text-white text-left font-semibold text-lg";
   const definePLink =
     "text-gray-300 text-left hover:decoration-underline cursor-pointer hover:underline";

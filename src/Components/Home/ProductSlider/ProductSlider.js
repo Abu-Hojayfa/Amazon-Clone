@@ -66,10 +66,6 @@ const ProductSlider = () => {
       imgLink: h2,
     },
     {
-      id: "fd1",
-      imgLink: fd1,
-    },
-    {
       id: "h3",
       imgLink: h3,
     },

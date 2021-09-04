@@ -34,30 +34,29 @@ export const signInWithGoogle = () => {
     });
 };
 
-export const createUserWithEmail = ({ email, password }) => {
+export const createUserWithEmail = ( email, password ) => {
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
       // ..
+      console.log(error);
     });
 };
 
-export const signInWithEmail = ({ email, password }) => {
+export const signInWithEmail = (email, password) => {
   firebase
     .auth()
     .signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      // ...
+      jwtToken();
+      console.log(user);
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -65,12 +64,12 @@ export const signInWithEmail = ({ email, password }) => {
     });
 };
 
- const jwtToken = () => {
+const jwtToken = () => {
   firebase
     .auth()
     .currentUser.getIdToken(/* forceRefresh */ true)
     .then(function (idToken) {
-      sessionStorage.setItem('token', idToken);
+      sessionStorage.setItem("token", idToken);
     })
     .catch(function (error) {
       // Handle error
